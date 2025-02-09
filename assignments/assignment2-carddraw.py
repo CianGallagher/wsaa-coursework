@@ -21,13 +21,27 @@ for card in drawn_cards:
 # Suit can be ignored until we need to compare suits for a flush per assignment brief, do that last as the other checks are pretty much identical.
 # Three of a kind implementation is overwriting the pair check... break might be helping and hindering here...
 
-pair = False
-for card in hand:
-    if hand.count(card) == 2:
-        pair = True
-        break
+hand_values = [card[0] for card in hand]
+is_pair = False
+is_trips = False
 
-if pair:
-    print("Congrats, you have a pair!")
-else:
-    print("You'll have to settle for a high card.")
+for value in set(hand_values):  
+    count = hand_values.count(value)
+    if count == 2:
+        is_pair = True
+        print(f'Congrats, you have a pair of {value}s!')
+    elif count == 3:
+        is_trips = True
+        print(f'Congrats, you have Three of a kind {value}s!')
+    
+
+
+
+
+
+
+
+
+
+
+
