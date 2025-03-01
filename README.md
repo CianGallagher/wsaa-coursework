@@ -37,3 +37,15 @@ This program should not be a long one
     I don't need you to reformat or analyse the data in any way
     It should be about 10ish lines long (I have not counted)
 You will need to find the dataset in CSO.ie, try economic and then finance, then finance indicators. yes it is difficult to find, that is part of the task, actually the easiest way to find it is search for it.
+
+
+**Assignment 4** 
+Write a program in python that will read a file from a repository, 
+
+The program should then replace all the instances of the text "Andrew" with your name. 
+
+The program should then commit those changes and push the file back to the repository (You will need authorisation to do this).
+
+I do not need to see your keys (see lab2)
+
+Handup: Push the program as assignment04-github.py to assignments repository.
