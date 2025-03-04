@@ -1,14 +1,16 @@
-#from github import Github
-# import requests
-# import urllib.parse
-from config import apikeys
+import requests
+import json
+from config import apikeys as cfg
 
-# 1. Access and Pull the repo file ?? Read more into authentication
+url = 'https://api.github.com/repos/CianGallagher/PrivateRepo'
 
-# 2. Update the files text
-with open("whatever the repo file is", "r") as file:
-    content = file.read()
+apikey = cfg['github_private_repo_key']
 
-updated_content = content.replace("Andrew", "Cian")
+# Request the data from the API using the URL and API key
+response = requests.get(url, auth=('token', apikey))
 
-# 3. Push the updated file back to the repo
+print(response.status_code)
+
+filename = "private_repo.json"
+with open(filename, 'w') as f:
+    json.dump(response.json(), f, indent=4)
