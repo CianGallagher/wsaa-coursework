@@ -14,3 +14,6 @@ print(response.status_code)
 filename = "private_repo.json"
 with open(filename, 'w') as f:
     json.dump(response.json(), f, indent=4)
+
+# Find a way to interact with the andrew.txt file within this repo.
+contents_url = "https://api.github.com/repos/CianGallagher/PrivateRepo/contents/{+path}"
