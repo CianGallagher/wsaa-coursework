@@ -3,6 +3,7 @@ config.py
 
 # my output files
 cso.json
+private_repo.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
