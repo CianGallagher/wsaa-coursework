@@ -21,7 +21,7 @@ with open(filename, 'w') as f:
     json.dump(response.json(), f, indent=4)
 
 file_data = response.json()
-content = response.json()['content']
+content = file_data['content']
 print(content)
 
 # GitHub API encodes txt in Base64, this seems to be a standard encoding that github API uses when reading to JSON - https://docs.github.com/en/rest/repos/contents?apiVersion=2022-11-28 & https://docs.python.org/3/search.html?q=.b64decode
