@@ -17,15 +17,15 @@ for card in drawn_cards:
     hand.append((value, suit))
     print(f'Card {counter}: {value} of {suit}')
 
-# Might need to convert royals and ace (High and/or low ???) to integers for comparison ( J = 11, Q =12 etc.)- maybe counting the number of cards with the same value will work instead of doing if loops for everything
-# Suit can be ignored until we need to compare suits for a flush per assignment brief, do that last as the other checks are pretty much identical.
-
 FACE_CARDS = {'T': 10, 'J': 11, 'Q': 12, 'K': 13, 'A': 14}
 
 hand_values = [card[0] for card in hand]
 hand_suits = [card[1] for card in hand]
+# Flush test
+# hand_suits = ["CLUBS","CLUBS","CLUBS","CLUBS","CLUBS"]
 is_pair = False
 is_trips = False
+
 
 for value in set(hand_values):  
     count = hand_values.count(value)
@@ -36,6 +36,10 @@ for value in set(hand_values):
         is_trips = True
         print(f'Congrats, you have Three of a kind {value}s!')
 
+
+if len(set(hand_suits)) == 1:
+    is_flush = True
+    print(f'Congrats, you have a flush!')
 
 # https://stackoverflow.com/questions/36525890/in-python-how-can-you-sort-a-hand-of-poker-list-and-detect-if-it-is-a-straight
     
