@@ -1,6 +1,8 @@
 import requests
 import json
 
+# data location - CRO site Home > Finance > Financial Indicators > FIQ02 - Exchequer Account (Historical Series)
+
 CSO_URL = "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FIQ02/JSON-stat/2.0/en"
 
 response = requests.get(CSO_URL)
